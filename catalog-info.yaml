@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: f9ip7fzty-go-gitops
+  description: This is GitOps manifest for f9ip7fzty-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=f9ip7fzty-go
+    backstage.io/kubernetes-id: f9ip7fzty-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: f9ip7fzty-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:f9ip7fzty-go
